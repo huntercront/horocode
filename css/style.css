@@ -32,6 +32,7 @@ html {
 body {
 	margin: 0;
 	font-size: 16px;
+	background-color: #434343;
 }
 hr {
 	box-sizing: content-box;
@@ -252,6 +253,11 @@ h2{
 h4{
 	font-size: 2.5em;
 }
+h5{
+	font-size: 1.5em;
+	font-family: 'Geometria';
+	font-weight: 800;
+}
 /*text-end*/
 /* header */
 .header{
@@ -260,6 +266,7 @@ h4{
 	position: fixed;
 	top:0;
 	left:0;
+	z-index: 100;
 	width: 100vw;
 
 }
@@ -386,5 +393,64 @@ margin-left: 30px;
 /* hero-end*/
 
 /*comingfilms*/
+.comingfilms__tiitle{
+	text-align: left;
+}
+.comingfilms{
+	color:#fff;
+}
+.comingfilms__container{
+	display: flex;
+	justify-content: center;
+	width:100%;
+}
 
+.comingfilms__container__left{
+	width: 30%;
+	display: flex;
+	min-height: 480px;
+	background-size: cover;
+	background-repeat: no-repeat;
+
+}
+.comingfilms__container__left__film{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: flex-start;
+	position: relative;
+	padding:14px 34px;
+}
+.comingfilms__container__right{
+	width: 70%;
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	
+}
+.comingfilms__container__right__film{
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: flex-start;
+	position: relative;
+	padding:14px 34px;
+}
+.comingfilms__container__right__film__year, .comingfilms__container__left__film__year{
+align-self: flex-end;
+position: absolute;
+top:2%;
+right: 2%;
+}
+.comingfilms__container__right__film__producer,.comingfilms__container__left__film__producer{
+	font-size: 0.8em;
+	font-family: 'Geometria';
+	font-weight: 500;
+}
 /*comingfilms-end*/
