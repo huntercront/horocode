@@ -34,6 +34,11 @@ body {
 	font-size: 16px;
 	background-color: #434343;
 }
+@media(max-width:768px){
+	body {
+		font-size: 14px;
+	}
+}
 hr {
 	box-sizing: content-box;
 	height: 0;
@@ -351,7 +356,7 @@ h5{
 }
 @media(max-width:420px){
 	.hero__butions__bution{
-		width: 90vw;
+		width: 87vw;
 		height: 39px;
 		position: relative;
 		transition: 350ms ease-in-out;
@@ -393,8 +398,12 @@ margin-left: 30px;
 /* hero-end*/
 
 /*comingfilms*/
+.comingfilms{
+	margin-top: -15vh;
+}
 .comingfilms__tiitle{
 	text-align: left;
+	margin-bottom: 52px;
 }
 .comingfilms{
 	color:#fff;
@@ -445,12 +454,173 @@ margin-left: 30px;
 .comingfilms__container__right__film__year, .comingfilms__container__left__film__year{
 align-self: flex-end;
 position: absolute;
-top:2%;
-right: 2%;
+top:14px;
+right: 37px;
 }
 .comingfilms__container__right__film__producer,.comingfilms__container__left__film__producer{
 	font-size: 0.8em;
 	font-family: 'Geometria';
+	font-weight: normal;
+	margin-bottom: 20px;
+}
+.comingfilms__container__right__film__genre,.comingfilms__container__left__film__genre{
+	margin-bottom: 0;
+	font-size: 0.7em;
+	font-family: 'Geometria';
 	font-weight: 500;
 }
+.comingfilms__container__right__film__date,.comingfilms__container__left__film__date
+{
+	margin-bottom: 18px;
+}
 /*comingfilms-end*/
+
+/*cinema*/
+.row__t{
+	display: flex;
+	align-content: center;
+	align-items: center;
+	justify-content:center;
+	min-height:600px;
+}
+@media(max-width:714px){
+	.row__t{
+		flex-direction: column;
+	}
+}
+.cinema__tittle{
+	color: #fff;
+	max-width: 432px;
+	margin-left: 7%;
+	font-size: 1.5em;
+	font-family: 'Geometria';
+	font-weight: 500;
+}
+@media(max-width:714px){
+	.cinema__tittle{
+
+		max-width: 80%;
+		margin-left: 0;
+		margin-top: 50px;
+		text-align: center;
+	}
+}
+.cinema__img{
+	max-width: 300px;
+	opacity: .74;
+	width: 100%;
+}
+@media(max-width:714px){
+	.cinema__img{
+		max-width: 180px;
+		opacity: .74;
+		width: 100%;
+	}
+}
+/*cinema-end*/
+
+/*learn*/
+.learn{
+	background-color: #fff;
+}
+.learn__right{
+	display:flex;
+	align-content: center;
+	align-items: center;
+	background-image: linear-gradient(90deg,rgba(43,43,43,0.2), rgba(255,255,255,1));
+	margin-bottom: 20px;
+}
+.learn__tiitle{
+	color: #434343;
+	text-align: center;
+	margin-bottom: 40px;
+	padding-top: 40px;
+}
+.learn__left{
+	display:flex;
+	align-content: center;
+	align-items: center;
+	background-image: linear-gradient(90deg, rgba(255,255,255,1),rgba(43,43,43,0.2));
+	margin-bottom: 20px;
+	justify-content: flex-end;
+}
+/* .learn__right__img,.learn__left__img{
+	max-width: 380px;
+} */
+@media(max-width:768px){
+	.learn__right{
+		flex-direction:column;
+		margin-bottom: 30px;
+
+	}
+	.learn__left{
+		flex-direction:column-reverse;
+		margin-bottom: 30px;
+	}
+	.learn__right__img,.learn__left__img{
+		width: 100%;
+		max-width: 700px;
+	}
+	.learn__left__text__tiitle,.learn__left__text__descr{
+		text-align: left;
+		margin-right: 30px;
+	}
+}
+.learn__right__text{
+	display:flex;
+	flex-direction: column;
+}
+.learn__left__text__tiitle,.learn__right__text__tiitle{
+	font-size: 1.5em;
+	font-family: 'Geometria';
+	font-weight: 500;
+	color: #434343;
+}
+.learn__left__text__descr,.learn__right__text__descr{
+	font-size: 1em;
+	font-family: 'Geometria';
+	font-weight: normal;
+	color: #434343;
+}
+.learn__left__text__tiitle,.learn__left__text__descr{
+	text-align: right;
+	margin-right: 30px;
+	max-width: 600px;
+}
+.learn__right__text__tiitle,.learn__right__text__descr{
+	text-align: left;
+	margin-left: 30px;
+	max-width: 600px;
+}
+@media(max-width:768px){
+	.learn__left__text__tiitle,.learn__left__text__descr{
+		text-align: left;
+		margin-left: 10px;
+		margin-top: 15px;
+		margin-right: 0px;
+	}
+	.learn__right__text__tiitle,.learn__right__text__descr{
+		text-align: left;
+		margin-left: 10px;
+		margin-top: 15px;
+	}
+}
+@media(min-width:769px) and (max-width:950px){
+	.learn__left__text__tiitle,.learn__left__text__descr{
+		text-align: right;
+		margin-right: 10px;
+	}
+	.learn__right__text__tiitle,.learn__right__text__descr{
+		text-align: left;
+		margin-left: 10px;
+	}
+	.learn__right__img,.learn__left__img{
+		height: 100%;
+		width: auto;
+		overflow: hidden;
+		object-fit: cover;
+		object-position: center; 
+	}
+}
+
+/*learn-end*/
