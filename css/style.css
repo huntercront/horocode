@@ -331,6 +331,9 @@ h5{
 	cursor: pointer;
 	transition: 400ms;
 }
+.navbar__left__bution__img{
+	display: none;
+}
 .navbar__left__bution:hover{
 	background-color: rgba(233, 41, 43,0.7);
 }
@@ -406,10 +409,40 @@ display: none;
 	}
 	.navbar__left__bution{
 		position: fixed;
-		right:0;
-		bottom: 0px;
+		right:20px;
+		bottom: 20px;
+		padding: 0;
 		text-align: center;
-		width: 100%;
+		width: 60px;
+		height: 60px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 40px;
+	}
+	.notsee{
+		right:20px;
+		bottom: -80px;
+	}
+	.navbar__left__bution__img{
+		display: flex;
+		width: 30px;
+		animation: wigit infinite 4s alternate ease-in-out ;
+		}
+@keyframes wigit {
+			0%{
+
+				transform: rotate(87deg);
+			}
+			50%{
+				transform: rotate(123deg);
+			}
+			100%{
+				transform: rotate(87deg);
+			}
+		}
+	.navbar__left__bution span{
+		display: none;
 	}
 }
 @media(max-width:480px){
