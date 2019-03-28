@@ -1,9 +1,15 @@
-var avatarElem = document.getElementById('ticket');
-var avatarSourceBottom = avatarElem.getBoundingClientRect().bottom + window.pageYOffset;
 window.onscroll = function() {
-	if (avatarElem.classList.contains('notsee') && window.pageYOffset < avatarSourceBottom) {
-		avatarElem.classList.remove('notsee');
-	} else if (window.pageYOffset > avatarSourceBottom) {
-		avatarElem.classList.add('notsee');
-	}
-};
+  var pageY = window.pageYOffset || document.documentElement.scrollTop;
+	var innerHeight = document.documentElement.clientHeight;
+	var elem = document.getElementById("ticket");
+
+
+      if (pageY < innerHeight/2) {
+				elem.classList.add("notsee")
+			}
+			else
+			{
+				elem.classList.remove("notsee")
+			}
+		}
+
