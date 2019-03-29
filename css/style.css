@@ -314,16 +314,10 @@ h5{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	width: 60%;
-}
-.navbar__right{
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
-	width: 40%;
+	width: 100%;
 }
 .navbar__left__logo{
-	width: 50%;
+	width: 100%;
 }
 .navbar__left__bution{
 	background-color: #E9292B;
@@ -343,6 +337,15 @@ display: flex;
 justify-content: center;
 align-content: center;
 align-items: center;
+
+}
+.navbar__left__bution__icons span{
+	font-family: 'Geometria';
+	font-weight: 500;
+	text-transform: uppercase;
+	font-weight: 800;
+	font-size: 0.8em;
+	margin-left: 5px;
 }
 .navbar__left__bution__icons__icon{
 	width: 24px;
@@ -352,7 +355,7 @@ align-items: center;
 .navbar__left__bution__icons__icon:before{
 	content: '';
 	position: absolute;
-	top:-8px;
+	top:-3px;
 	left: 0;
 	width: 24px;
 	height: 3px;
@@ -361,7 +364,7 @@ align-items: center;
 .navbar__left__bution__icons__icon:after{
 	content: '';
 	position: absolute;
-	bottom:-8px;
+	bottom:-3px;
 	left: 0;
 	width: 24px;
 	height: 3px;
@@ -386,16 +389,13 @@ align-items: center;
 		width: 20%;
 		min-width: 100px;
 	}
-	.navbar__left{
-		width: 75%;
-	}
 
 }
-@media(max-width:714px){
+@media(max-width:768px){
 	.navbar{
 		height: 70px;
 	}
-	.navbar__right{
+	.navbar__right__socials{
 display: none;
 	}
 
@@ -446,8 +446,13 @@ display: none;
 	}
 }
 @media(max-width:480px){
-	.navbar__left__logo{
+	.navbar__left__home{
+		display: flex;
+		justify-content: flex-end;
 		width: 70%;
+	}
+	.navbar__left__logo{
+
 	}
 }
 /* header-end*/
@@ -719,6 +724,7 @@ margin-bottom: 7px;
 .cinema{
 	position: relative;
 	z-index: 0;
+
 }
 .row__t{
 	display: flex;
@@ -916,11 +922,32 @@ margin-bottom: 7px;
 	align-content: center;
 	margin-left: 25px;
 }
+.lections__text__container__container__img{
+transition: 300ms;
+}
+.lections__text__container__container:hover .lections__text__container__container__img{
+		animation: scale infinite 3s alternate ease-in-out ;
+		opacity: 0.7;
+}
+@keyframes scale {
+	0%{
+
+		transform: scale(1.2);
+	}
+	50%{
+		transform: scale(1);
+	}
+	100%{
+		transform: scale(1.2);
+	}
+}
+.lections__text__container__container:hover{
+	opacity: 0.7;
+	cursor: pointer;
+}
 .lections__text__container__container__descr{
 	margin:0;
 	padding-left: 15px;
-}
-.lections__text__container__tiitle{
 }
 .lections__text__descr{
 	font-family: 'Geometria';
@@ -981,5 +1008,265 @@ margin-bottom: 7px;
 	background-color: rgba(255,255,255,0.1);
 	width: 720px;
 	height: 180px;
+	padding: 0 10px;
 }
 /*club-end*/
+
+/*comments*/
+.comments{
+	color:#fff;
+}
+.comments__tiitle{
+	text-align: center;
+	margin-top: 3em;
+}
+.comments__container{
+	margin-top: 4em;
+	display: flex;
+	justify-content: space-between;
+}
+
+.comments__container__comment{
+	max-width: 420px;
+	border:1px solid #707070;
+	padding: 1.5em;
+	margin: 0.5rem;
+}
+@media(max-width:964px){
+	.comments__container{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	.comments__container__comment{
+		max-width: 100%;
+		margin: 1em 0; 
+	}
+}
+.comments__container__comment__text{
+	font-family: 'Geometria';
+		font-weight: normal;
+		margin-bottom: 0;
+}
+.comments__container__comment__name{
+	font-family: 'Geometria';
+		font-weight: 500;
+}
+/*commentts-end*/
+
+/*teashers*/
+.teachers{
+	color:#fff;
+}
+.teachers__tiitle{
+	margin-top: 3em;
+	text-align: center;
+}
+.teachers__container{
+display: flex;
+align-items: center;
+justify-content: center;
+margin-top: 3em;
+z-index: 20;
+position: relative;
+}
+.teachers__container__teacher{
+	margin-top: 3em;
+	display: flex;
+	justify-content: space-between;
+	background-color: rgba(255,255,255,0.1);
+	max-width: 500px;
+}
+.teachers__container__teacher__img{
+	transform: translate(-12px,-25px);
+}
+.teachers__container__teacher__text{
+	padding: 1.2em;
+	padding-bottom: 25px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.teachers__container__teacher__text__text{
+	font-family: 'Geometria';
+	font-weight: normal;
+
+}
+.teachers__container__teacher__text__name{
+	font-family: 'Geometria';
+	font-size: 1.2em;
+		font-weight: 500;
+}
+.teachers__container__teacher__img{
+	width: 100%;
+	height: auto;
+}
+.eachers__container__teacher__img__container{
+	width: 100%;
+	height: auto;
+	max-width: 220px;
+}
+@media(max-width:480px){
+	.teachers__container__teacher{
+	flex-direction: column;
+	}
+	.eachers__container__teacher__img__container{
+		width: 100%;
+		height: auto;
+		max-width: 90%;
+	}
+}
+
+/*teachers-end*/
+
+/*sessions*/
+.sessions{
+	position: relative;
+	color: #fff;
+	margin-top: -100px;
+	z-index: 10;
+}
+.row__sessions{
+	position: relative;
+	display: flex;
+	align-items: center;
+	align-content: center;
+	justify-content: flex-start;
+	min-height: 700px;
+}
+.sessions__container{
+	display: flex;
+	align-items: center;
+	align-content: center;
+	justify-content: flex-start;
+	max-width: 430px;
+}
+.sessions__container__tiitle{
+	color: #fff;
+	max-width: 432px;
+	font-size: 1.5em;
+	font-family: 'Geometria';
+	font-weight: 500;
+}
+/*sessions-end*/
+
+/*prefooter*/
+
+.prefooter__container{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+
+}
+.prefooter__container__socials__links__icon{
+	margin: 1em;
+}
+.prefooter__container__socials{
+	margin-bottom: 1.5em;
+}
+.prefooter__container__phone{
+	color: #fff;
+	max-width: 432px;
+	font-size: 1.4em;
+	font-family: 'Geometria';
+	font-weight: 500;
+	margin-bottom:12px;
+	opacity: 1;
+}
+.prefooter__container__email{
+	color: #fff;
+	opacity: 0.6;
+	max-width: 432px;
+	font-size: 1.4em;
+	font-family: 'Geometria';
+	font-weight: 500;
+	margin-bottom:15px;
+}
+.prefooter__container__adress{
+	display: flex;
+	align-items: center;
+}
+
+.prefooter__container__adress__text{
+	color: #fff;
+	font-size: 1em;
+	font-family: 'Geometria';
+	font-weight: 500;
+	margin: 0;
+}
+.prefooter__container__adress__buttion{
+	color: #fff;
+	font-size: 0.9em;
+	font-family: 'Geometria';
+	font-weight: 500;
+	background-color: #7A7A7A;
+	padding: 10px 15px;
+	margin-left: 12px;
+	transition: 450ms;
+}
+.prefooter__container__adress__buttion img{
+	width: 18px;
+	transition: 300ms;
+}
+.prefooter__container__adress__buttion img{
+animation: ease-in-out infinite updown alternate 1.5s ;
+
+}
+
+@keyframes updown{
+	0%{
+
+		transform: translate(0,-5px);
+	}
+	50%{
+		transform: rotate(0);
+	}
+	100%{
+		transform: rotate(0,-5px);
+	}
+}
+.prefooter__container__adress:hover .prefooter__container__adress__buttion{
+	background-color: rgba(122, 122, 122,0.6);
+	cursor: pointer;
+}
+.prefooter__container__adress:hover{
+	cursor: pointer;
+}
+
+@media (max-width:480px){
+	.prefooter__container__adress{
+		flex-direction: column;
+	}
+	.prefooter__container__adress__buttion{
+
+		margin: 1.5em 0em;
+	}
+}
+/*prefooterend*/
+
+/*footer*/
+.footer{
+	color: rgb(196, 196, 196);
+}
+.footer__content{
+	margin-top: 50px;
+	padding: 1em 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-top: 1px solid #707070;
+}
+.footer__content__link{
+	max-width: 200px;
+}
+.footer__content__link__img{
+	width: 100%;
+}
+.footer__content__copiright{
+	margin-bottom: 0;
+	word-wrap: none;
+	white-space: nowrap;
+	margin-left: 2em;
+}
+/*footer-end*/
