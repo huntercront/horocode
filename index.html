@@ -284,7 +284,7 @@
 								школы философии НИУ 
 								"Высшая школа экономики".</p>
 								<div class="teachers__container__teacher__text__social">
-									<a href="" ><img src="/img/social__icons/facebook.svg" alt="" ></a>
+									<a href="https://www.facebook.com/HorrorPhilHSE/" ><img src="/img/social__icons/facebook.svg" alt="" ></a>
 								</div>
 					</div>
 												</div>
@@ -316,7 +316,7 @@
 								</div>
 								<a href="tel:+74951182636" class="prefooter__container__phone">+7 (495) 118 2636</a>
 								<a href="mailto:info@kinocode.ru" class="prefooter__container__email">info@kinocode.ru</a>
-								<div class="prefooter__container__adress">
+								<div class="prefooter__container__adress js-tingle-modal-3">
 									<p class="prefooter__container__adress__text">г. Москва, ул. Земляной вал д. 33
 										</p>
 									<div class="prefooter__container__adress__buttion"><img src="./img/maps-and-flags.svg" alt=""> <span>на карте</span></div>
@@ -325,13 +325,19 @@
 						</div>
 				</div>
 		</section>
+		<div class="tingle-demo-big" style="display: none;">
+					<div id="map" class="map-container">
+						<script src="https://api-maps.yandex.ru/2.1/?apikey=93fece7a-9fe4-47c6-80de-eaea41ec7d4a&lang=ru_RU" type="text/javascript" defer></script>
+					</div>
+</div>
+		</div>
 	</article>
 
 	<footer class="footer">
 			<div class="container">
 					<div class="row__footer">
 						<div class="footer__content">
-							<a href="" class="footer__content__link"><img src="./img/logo-clasic.svg" alt="" class="footer__content__link__img"></a>
+							<a href="" class="footer__content__link "><img src="./img/logo-clasic.svg" alt="" class="footer__content__link__img"></a>
 							<p class="footer__content__copiright">© 2019, KinoCode</p>
 						</div>
 
@@ -357,8 +363,55 @@
 	modalSurprise.setContent('<iframe width="100%" height="450" src="https://www.youtube.com/embed/2sH1BsZC4ZM?autoplay=1" frameborder="0" allowfullscreen</iframe>');
         modalSurprise.open();
 }
+});
 
-		});
+
+		</script>
+		<script>
+			var map = document.querySelector('.js-tingle-modal-3');
+    map.addEventListener('click', function(){
+			
+        var modalBigContent = new tingle.modal({
+            onClose: function(){
+                modalBigContent.destroy();
+            }
+        });
+				modalBigContent.setContent(document.querySelector('.tingle-demo-big').innerHTML);
+			
+				modalBigContent.open();
+				ymaps.ready(function () {
+	var myMap = new ymaps.Map('map', {
+					center: [55.75733806898081,37.65916449999994],
+					zoom: 16,
+					controls: ['zoomControl'],
+        behaviors: ['drag']
+			}),
+
+			// Создаём макет содержимого.
+			MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+					'<div style="background-color: #414141; font-weight: bold;">$[properties.iconContent]</div>'
+			),
+
+			myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+					hintContent: '<div class="hint-map">г. Москва, ул. Земляной вал д. 33</div>',
+					balloonContent: '<div class="balloon-map"><img class="balloon-map-icon" src="img/logo-clasic.1.svg">Новый взгляд на просмотр фильмов ...Вы не уйдете отсюда прежним</div>'
+			}, {
+					// Опции.
+					// Необходимо указать данный тип макета.
+					iconLayout: 'default#image',
+					// Своё изображение иконки метки.
+					iconImageHref: '/img/sicial_icon.png',
+					// Размеры метки.
+					// iconImageSize: [100, 42],
+					iconImageSize: [70, 70],
+					iconImageOffset: [-40, -75]
+			});
+	myMap.geoObjects
+			.add(myPlacemark)
+			// .add(myPlacemarkWithContent);
+});
+			});
+		
 		</script>
 </body>
 

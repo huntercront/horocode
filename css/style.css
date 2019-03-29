@@ -451,9 +451,6 @@ display: none;
 		justify-content: flex-end;
 		width: 70%;
 	}
-	.navbar__left__logo{
-
-	}
 }
 /* header-end*/
 
@@ -465,6 +462,20 @@ display: none;
 	background-size: cover;
 	background-position: center center;
 	color: #fff;
+}
+@media(max-width:768px){
+	.hero{
+		animation: lefttoright infinite 34s alternate forwards;
+	}
+	@keyframes lefttoright{
+		0%{
+
+			background-position: left center;
+		}
+		100%{
+			background-position: right center;
+		}
+	}
 }
 .row__v{
 	height: 100%;
@@ -1092,6 +1103,18 @@ position: relative;
 	font-weight: normal;
 
 }
+.teachers__container__teacher__text__social{
+	display: flex;
+	justify-content: flex-start;
+	align-content: center;
+	align-items: center;
+}
+.teachers__container__teacher__text__social a{
+	margin-right: 15px;
+}
+.teachers__container__teacher__text__social a img{
+width: 100%;
+}
 .teachers__container__teacher__text__name{
 	font-family: 'Geometria';
 	font-size: 1.2em;
@@ -1270,3 +1293,17 @@ animation: ease-in-out infinite updown alternate 1.5s ;
 	margin-left: 2em;
 }
 /*footer-end*/
+.tingle-demo{
+	display: none;
+}
+.map-container{
+	height: 300px;
+	width: 100%;
+}
+.balloon-map-icon{
+	width: 200px;
+}
+.balloon-map{
+	display: flex;
+	flex-direction: column;
+}
