@@ -281,7 +281,7 @@ h5{
 	content: '';
 	position: absolute;
 	top: 0;
-	left:0;
+	left: 0;
 	width: 100%;
 	height: 50%;
 	background-image: linear-gradient(0deg,transparent, #434343);
@@ -623,6 +623,7 @@ justify-content: flex-start;
 	background-size: cover;
 	background-position: center center;
 	color: #fff;
+	overflow-y: hidden;
 }
 @media(max-width:768px){
 	.hero{
