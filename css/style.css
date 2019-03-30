@@ -467,6 +467,13 @@ display: none;
 	transition: 300ms ease-in-out;
 	opacity: 1;
 }
+.unactive{
+	transform: translate(0,-150%);
+	opacity: 0;
+}
+.menu__open{
+	background-color: #434343;
+}
 .openmenu__container{
 	display: flex;
 	justify-content: space-between;
@@ -605,13 +612,7 @@ justify-content: flex-start;
 	margin: 0 1rem;
 	}
 }
-.unactive{
-	transform: translate(0,-150%);
-	opacity: 0;
-}
-.menu__open{
-	background-color: #434343;
-}
+
 /* header-end*/
 
 /* hero-end*/
