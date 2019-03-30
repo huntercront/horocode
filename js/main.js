@@ -12,5 +12,10 @@ window.onscroll = function() {
 				elem.classList.remove("notsee")
 			}
 		}
-
-		
+var mainMemu = document.getElementById("mainMemu")
+var menu = document.getElementById("menu");
+var headerColor = document.getElementById("header");
+mainMemu.onclick= function() {
+	menu.classList.toggle("unactive");
+					headerColor.classList.toggle("menu__open");
+			}

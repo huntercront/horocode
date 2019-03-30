@@ -9,7 +9,7 @@
 	<title>HorrorCode</title>
 </head>
 <body>
-	<header class="header">
+	<header id="header" class="header">
 		<div class="container">
 				<nav class="navbar">
 					<div class="navbar__left">
@@ -34,6 +34,64 @@
 					</nav>
 		</div>
 	</header>
+	<menu id="menu" class="openmenu unactive">
+			<div class="container">
+				<div class="openmenu__container">
+					<div class="openmenu__container__section">
+						<a href="" class="openmenu__container__section__link">Главная </a>
+						<a href="" class="openmenu__container__section__link">Афиша</a>
+						<a href="" class="openmenu__container__section__link">KinoCode ужаса</a>
+						<a href="" class="openmenu__container__section__link">KinoCode драммы</a>
+						<a href="" class="openmenu__container__section__link">KinoCode мелодраммы</a>
+						<a href="" class="openmenu__container__section__link">KinoCode комедии</a>
+						<a href="" class="openmenu__container__section__link">Вступить в клуб</a>
+						<a href="" class="openmenu__container__section__link">Контакты</a>
+					</div>
+					<div class="info__container">
+					<div class="openmenu__container__section__news">
+						<p class="openmenu__container__section__news__tiitle">Новости</p>
+						<div class="openmenu__container__section__news__container">
+							<img src="./img/news__img.jpg" class="openmenu__container__section__news__container__img">
+								<span class="openmenu__container__section__news__container__date">12.03.2019</span>
+								<a href="" class="openmenu__container__section__news__container__link">Далеко-далеко за 
+										словесными...</a>
+						</div>
+						<div class="openmenu__container__section__news__container">
+								<img src="./img/news__img.jpg" class="openmenu__container__section__news__container__img">
+									<span class="openmenu__container__section__news__container__date">12.03.2019</span>
+									<a href="" class="openmenu__container__section__news__container__link">Далеко-далеко за 
+											словесными...</a>
+								</div>
+
+					</div>
+					<div class="openmenu__container__section__paper">
+						<p class="openmenu__container__section__paper__titte">Статьи</p>
+						<div class="openmenu__container__section__paper__container">
+						<a href="" class="openmenu__container__section__paper__link">Далеко-далеко за 
+								словесными, горами 
+								в стране гласных </a>
+						<span class="openmenu__container__section__paper__auyhor">Иванов Иван</span>
+					</div>
+					<div class="openmenu__container__section__paper__container">
+							<a href="" class="openmenu__container__section__paper__link">Далеко-далеко за 
+									словесными, горами 
+									в стране гласных </a>
+							<span class="openmenu__container__section__paper__auyhor">Иванов Иван</span>
+						</div>
+					</div>
+					<div class="openmenu__container__section__coming">
+						<p class="openmenu__container__section__coming__tiitle">Ближайшие кинопоказы</p>
+						<div class="openmenu__container__section__coming__container">
+							<img src="./img/coming__film__img.jpg" alt="" class="openmenu__container__section__coming__container__img">
+							<p class="openmenu__container__section__coming__container__date">29 апреля</p>
+							<p class="openmenu__container__section__coming__container__name">Спуск</p>
+							<span class="openmenu__container__section__coming__container__ganre">ужасы</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</menu>
 	<article>
 		<section class="hero overley__bottom">
 			<div class="container">
@@ -159,7 +217,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="cinema overley__bottom overley__top" style="background:radial-gradient(rgba(65, 65, 65,0.7), rgba(65, 65, 65,0.7)), url('./img/cinema__block__bg.jpg');	background-repeat: no-repeat;
+		<section class="cinema overley__bottom overley__top" style="background:radial-gradient(rgba(65, 65, 65,0.7), rgba(65, 65, 65,0.7)), url('./img/cinema__block__bg-min.jpg');	background-repeat: no-repeat;
 		background-position: center 20%;
 		background-size: cover;">
 				<div class="container">
@@ -175,7 +233,7 @@
 				<div class="container">
 						<div class="row__l">
 								<h3 class="learn__tiitle">ВЫ узнаете</h3>
-							<div class="learn__right">
+							<div class="learn__right first__add">
 								<img src="./img/learn__img.jpg" alt="" class="learn__right__img">
 								<div class="learn__right__text">
 									<h5 class="learn__right__text__tiitle">Ужасы-средство познания истины.</h5>
@@ -191,7 +249,7 @@
 
 							<div class="learn__left">
 
-									<div class="learn__left__text">
+									<div class="learn__left__text second__add">
 										<h5 class="learn__left__text__tiitle">Философия Ужаса</h5>
 										<p class="learn__left__text__descr">Философия и фильмы ужасов похожи друг на друга: они призваны
 												без жалости пересматривать концепты реальности и
@@ -202,7 +260,7 @@
 									<img src="./img/learn__right__3.jpg" alt="" class="learn__left__img">
 								</div>
 
-								<div class="learn__right">
+								<div class="learn__right thert__add">
 										<img src="./img/learn__right__2.jpg" alt="" class="learn__right__img">
 										<div class="learn__right__text">
 											<h5 class="learn__right__text__tiitle">Почему мы боимся?</h5>
@@ -217,7 +275,7 @@
 						</div>
 				</div>
 		</section>
-		<section class="lections overley__bottom" style="background-image: radial-gradient(rgba(65, 65, 65,0.3), rgba(65, 65, 65,0.6)), url('./img/lections__bg__2.jpg');">
+		<section class="lections overley__bottom" style="background-image: radial-gradient(rgba(65, 65, 65,0.3), rgba(65, 65, 65,0.6)), url('./img/lections__bg__2-min.jpg');">
 				<div class="container">
 						<div class="row__lektions">
 							<div class="lections__text">
@@ -284,7 +342,7 @@
 								школы философии НИУ 
 								"Высшая школа экономики".</p>
 								<div class="teachers__container__teacher__text__social">
-									<a href="https://www.facebook.com/HorrorPhilHSE/" ><img src="/img/social__icons/facebook.svg" alt="" ></a>
+									<a href="https://www.facebook.com/HorrorPhilHSE/" ><img src="./img/social__icons/facebook.svg" alt="" ></a>
 								</div>
 					</div>
 												</div>
@@ -293,7 +351,7 @@
 						</div>
 				</div>
 		</section>
-		<section class="sessions overley__bottom overley__top" style="background:radial-gradient(rgba(65, 65, 65,0.7), rgba(65, 65, 65,0.7)), url('./img/sessions__bg.jpg');	background-repeat: no-repeat;
+		<section class="sessions overley__bottom overley__top" style="background:radial-gradient(rgba(65, 65, 65,0.7), rgba(65, 65, 65,0.7)), url('./img/sessions__bg-min.jpg');	background-repeat: no-repeat;
 		background-position: center center;
 		background-size: cover;">
 				<div class="container">
@@ -327,7 +385,7 @@
 		</section>
 		<div class="tingle-demo-big" style="display: none;">
 					<div id="map" class="map-container">
-						<script src="https://api-maps.yandex.ru/2.1/?apikey=93fece7a-9fe4-47c6-80de-eaea41ec7d4a&lang=ru_RU" type="text/javascript" defer></script>
+
 					</div>
 </div>
 		</div>
@@ -348,6 +406,7 @@
 <script src="./js/main.js"></script>
 <script src="./js/tingle.min.js" defer></script>
 <link rel="stylesheet" href="./css/tingle.min.css">
+<script src="https://api-maps.yandex.ru/2.1/?apikey=93fece7a-9fe4-47c6-80de-eaea41ec7d4a&lang=ru_RU" type="text/javascript" defer></script>
 <script>
 		var video = document.querySelector('.video__modal');
     video.addEventListener('click', function(){
@@ -394,13 +453,13 @@
 
 			myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
 					hintContent: '<div class="hint-map">г. Москва, ул. Земляной вал д. 33</div>',
-					balloonContent: '<div class="balloon-map"><img class="balloon-map-icon" src="img/logo-clasic.1.svg">Новый взгляд на просмотр фильмов ...Вы не уйдете отсюда прежним</div>'
+					balloonContent: '<div class="balloon-map"><img class="balloon-map-icon" src="./img/logo-clasic.1.svg">Новый взгляд на просмотр фильмов ...Вы не уйдете отсюда прежним</div>'
 			}, {
 					// Опции.
 					// Необходимо указать данный тип макета.
 					iconLayout: 'default#image',
 					// Своё изображение иконки метки.
-					iconImageHref: '/img/sicial_icon.png',
+					iconImageHref: './img/sicial_icon.png',
 					// Размеры метки.
 					// iconImageSize: [100, 42],
 					iconImageSize: [70, 70],

@@ -301,6 +301,7 @@ h5{
 	left:0;
 	z-index: 100;
 	width: 100vw;
+	transition: 300ms ease-in;
 
 }
 .navbar{
@@ -451,6 +452,165 @@ display: none;
 		justify-content: flex-end;
 		width: 70%;
 	}
+}
+/*openmenu*/
+.openmenu{
+	padding-left: 0;
+	color: #fff;
+	position: fixed;
+	top:79px;
+	width: 100%;
+	z-index: 100;
+	background-color: #434343;
+	margin-top: 0;
+	padding-top: 1em;
+	transition: 300ms ease-in-out;
+	opacity: 1;
+}
+.openmenu__container{
+	display: flex;
+	justify-content: space-between;
+
+}
+.openmenu__container__section{
+	display: flex;
+	flex-direction: column;
+	width: 180px;
+}
+.info__container{
+	width: calc(100% - 180px);
+	display: flex;
+	justify-content: space-around;
+}
+.openmenu__container__section__link{
+	font-size: 1em;
+	color: #fff;
+	opacity: 0.5;
+	margin-bottom: 1em;
+	transition: 300ms;
+}
+.openmenu__container__section__link:hover{
+	opacity: 1;
+}
+.openmenu__container__section__news__container{
+	display: flex;
+	flex-direction: column;
+}
+.openmenu__container__section__news__container__img{
+	max-width: 100px;
+}
+.openmenu__container__section__news__container__link{
+	font-family: 'Geometria';
+	font-weight: normal;
+	font-size: 1em;
+	max-width: 140px;
+	height: 3em;
+	overflow: hidden;
+	color: #fff;
+	transition: 300ms;
+}
+
+.openmenu__container__section__news__container__link:hover{
+	opacity: 0.5;
+}
+.openmenu__container__section__news__container__date{
+	font-family: 'Geometria';
+	font-weight: 500;
+	font-size: 0.7em;
+	margin-top: 10px;
+	margin-bottom: 5px;
+}
+.openmenu__container__section__paper__container{
+	display: flex;
+	flex-direction: column;
+}
+.openmenu__container__section__paper__link{
+	font-family: 'Geometria';
+	font-weight: normal;
+	font-size: 1em;
+	max-width: 140px;
+	height: 3.5em;
+	overflow: hidden;
+	color: #fff;
+	transition: 300ms;
+}
+.openmenu__container__section__paper__link:hover{
+	opacity: 0.5;
+}
+.openmenu__container__section__paper__auyhor{
+	font-family: 'Geometria';
+	font-weight: 500;
+	font-size: 0.7em;
+	margin-top: 5px;
+	margin-bottom: 20px;
+}
+.openmenu__container__section__coming__container{
+	display: flex;
+	flex-direction: column;
+}
+.openmenu__container__section__coming__container__img{
+	max-width: 115px;
+}
+.openmenu__container__section__coming__container__date{
+	font-family: 'Geometria';
+	font-weight: 500;
+	margin-bottom: 5px;
+}
+.openmenu__container__section__coming__container__ganre{
+	font-family: 'Geometria';
+	font-weight: 500;
+	font-size: 0.7em;
+}
+.openmenu__container__section__coming__container__name{
+	font-family: 'Geometria';
+	font-weight: normal;
+	font-size: 1em;
+	margin-bottom: 8px;
+}
+@media(max-width:768px){
+	.openmenu{
+		top:69px;
+	}
+	.openmenu__container{
+		flex-direction: column;
+	}
+	.info__container{
+		width: 100%;
+overflow-x: scroll;
+justify-content: flex-start;
+	}
+	.openmenu__container__section{
+
+	}
+	.openmenu__container__section__news div:last-child{
+		display: none;
+	}
+	.openmenu__container__section__paper div:last-child{
+		display: none;
+	}
+	.openmenu__container__section__coming__container__ganre{
+		display: none;
+	}
+	.openmenu__container__section__coming__container__img{
+		max-width: 50px;
+	}
+	.openmenu__container__section__news__container__img{
+		max-width: 70px;
+	}
+	.openmenu__container__section__coming__tiitle{
+		margin-bottom: 3px;
+	}
+	.openmenu__container__section__paper,.openmenu__container__section__news,.openmenu__container__section__coming{
+	min-width: 130px;
+	margin: 0 1rem;
+	}
+}
+.unactive{
+	transform: translate(0,-150%);
+	opacity: 0;
+}
+.menu__open{
+	background-color: #434343;
 }
 /* header-end*/
 
@@ -795,6 +955,8 @@ margin-bottom: 7px;
 	align-items: center;
 	background-image: linear-gradient(90deg,rgba(43,43,43,0.2), rgba(255,255,255,1));
 	margin-bottom: 20px;
+	position: relative;
+	z-index: 10;
 }
 .learn__tiitle{
 	color: #434343;
@@ -809,6 +971,44 @@ margin-bottom: 7px;
 	background-image: linear-gradient(90deg, rgba(255,255,255,1),rgba(43,43,43,0.2));
 	margin-bottom: 20px;
 	justify-content: flex-end;
+	position: relative;
+	z-index: 10;
+}
+.first__add:after{
+	content: '01';
+	position: absolute;
+	top:-0.6em;
+	left: -0.2em;
+	font-size: 10em;
+	z-index: -1;
+	font-family: 'Geometria';
+	font-weight: 800;
+	color: #414141;
+	opacity: 0.1;
+}
+.second__add:after{
+	content: '02';
+	position: absolute;
+	top:-0.6em;
+	right: -0.2em;
+	font-size: 10em;
+	z-index: -1;
+	font-family: 'Geometria';
+	font-weight: 800;
+	color: #414141;
+	opacity: 0.1;
+}
+.thert__add:after{
+	content: '03';
+	position: absolute;
+	top:-0.6em;
+	left: -0.2em;
+	font-size: 10em;
+	z-index: -1;
+	font-family: 'Geometria';
+	font-weight: 800;
+	color: #414141;
+	opacity: 0.1;
 }
 /* .learn__right__img,.learn__left__img{
 	max-width: 380px;
@@ -830,6 +1030,42 @@ margin-bottom: 7px;
 	.learn__left__text__tiitle,.learn__left__text__descr{
 		text-align: left;
 		margin-right: 30px;
+	}
+	.first__add:after{
+		content: '01';
+		position: absolute;
+		top:-0.6em;
+		left: -0.2em;
+		font-size: 8em;
+		z-index: -1;
+		font-family: 'Geometria';
+		font-weight: 800;
+		color: #414141;
+		opacity: 0.1;
+	}
+	.second__add:after{
+		content: '02';
+		position: absolute;
+		top:-0.6em;
+		right: -0.1em;
+		font-size: 8em;
+		z-index: -1;
+		font-family: 'Geometria';
+		font-weight: 800;
+		color: #414141;
+		opacity: 0.1;
+	}
+	.thert__add:after{
+		content: '03';
+		position: absolute;
+		top:-0.6em;
+		left: -0.2em;
+		font-size: 8em;
+		z-index: -1;
+		font-family: 'Geometria';
+		font-weight: 800;
+		color: #414141;
+		opacity: 0.1;
 	}
 }
 .learn__right__text{
@@ -1042,6 +1278,30 @@ transition: 300ms;
 	border:1px solid #707070;
 	padding: 1.5em;
 	margin: 0.5rem;
+	position: relative;
+	background-color: #434343;
+}
+.comments__container__comment:after{
+	content:'"';
+	position: absolute;
+	font-size: 8em;
+	left: 0;
+	bottom: -0.75em;
+	font-family: 'Geometria';
+	font-weight: 800;
+	color: #707070;
+	z-index: -1;
+}
+.comments__container__comment:before{
+	content:'"';
+	position: absolute;
+	font-size: 8em;
+	right:0;
+	top: -0.45em;
+	font-family: 'Geometria';
+	font-weight: 800;
+	color: #707070;
+	z-index: -1;
 }
 @media(max-width:964px){
 	.comments__container{
