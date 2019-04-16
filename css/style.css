@@ -1569,3 +1569,227 @@ animation: ease-in-out infinite updown alternate 1.5s ;
 	display: flex;
 	flex-direction: column;
 }
+
+
+
+
+
+
+/**********about_css*************/
+.about__hero{
+
+}
+@media(max-width:768px){
+	.about__hero{
+		animation: lefttoright infinite 34s alternate forwards;
+	}
+	@keyframes lefttoright{
+		0%{
+
+			background-position: left center;
+		}
+		100%{
+			background-position: right center;
+		}
+	}
+}
+.about__hero__overley__bottom:after{
+	content: '';
+	position: absolute;
+	bottom: -10%;
+	left:0;
+	width: 100%;
+	height: 60%;
+	background-image: linear-gradient(0deg,#434343, rgba(0,0,0,0));
+	z-index: 0;
+	user-select: none;
+}
+.row__hero__about{
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	position: relative;
+	z-index: 12;
+}
+.hero__about__tiitle{
+	font-size: 4em;
+	font-family: 'Geometria';
+	font-weight: 500;
+	margin-bottom: 0.1em;
+}
+.hero__about__buttons{
+	display: flex;
+	justify-content: center;
+}
+@media (max-width: 420px){
+.hero__about__buttons {
+    flex-direction: column;
+}
+}
+.hero__about__text{
+	font-size: 1.5em;
+	margin-bottom: 1em;
+	font-family: 'Geometria';
+	font-weight: 500;
+	text-align: center;
+}
+
+
+/*row__about__films*/
+
+.row__about__films{
+	position: relative;
+	z-index: 12;
+	color: #fff;
+}
+.about__films__slide__time{
+	margin-top: 0.5em;
+	font-family: 'Geometria';
+	font-weight: 500;
+	margin-left: 1em;
+	margin-bottom: 0.1em;
+	font-size: 1em;
+}
+.about__films__slide__name{
+
+	font-family: 'Geometria';
+	font-weight: 800;
+	margin-left: 1em;
+	font-size: 1em;
+	z-index: 12;
+}
+.about__films__slide__img{
+	width: 100%;
+	border-radius: 16px;
+	overflow: hidden;
+	padding:0.2em 0.5em;
+	z-index: 12;
+	opacity: 0.7;
+}
+.about__films__slide{
+	position: relative;
+	z-index: 10;
+}
+.overley__right:before{
+	content: '';
+	position: absolute;
+	top: 0%;
+	right:-1%;
+	width: 10%;
+	height: 70%;
+	background-image: linear-gradient(-90deg,#434343, rgba(0,0,0,0));
+	z-index: 1;
+	user-select: none;
+}
+.overley__left:after{
+	content: '';
+	position: absolute;
+	top: 0%;
+	left:0;
+	width: 10%;
+	height: 70%;
+	background-image: linear-gradient(90deg,#434343, rgba(0,0,0,0));
+	z-index: 1;
+	user-select: none;
+}
+.row__about__films__text{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 2em 0.5em 0.5em 0.5em;
+}
+@media (max-width: 500px){
+	.row__about__films__text{
+		flex-direction: column;
+		align-content: flex-start;
+		align-items: flex-start;
+	}
+	.row__about__films__text__button{
+		justify-self: flex-end;
+		align-self: flex-end;
+	}
+	}
+.row__about__films__text__tiitle{
+	font-size: 2em;
+	font-family: 'Geometria';
+	font-weight: 500;
+}
+.row__about__films__text__button{
+	color: #fff;
+min-width: 80px;
+margin-left: 1em;
+}
+.row__about__films__text__button img{
+	margin-left: 0.5em;
+}
+.row__about__films__text__button__icon{
+	transition: 350ms;
+}
+.row__about__films__text__button:hover .row__about__films__text__button__icon{
+	transform: translate(7px,0);
+}
+.about__programs__container{
+	display: flex;
+	justify-content: space-between;
+	color: #fff;
+}
+.about__programs__container__item__tittle{
+	font-size: 1.5em;
+	font-family: 'Geometria';
+	font-weight: 800;
+	max-width: 120px;
+}
+.about__programs__container__item{
+	width: 32.5%;
+	height: 200px;
+	border-radius: 8px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-end;
+	padding: 1em;
+	box-shadow: 0 20px 40px rgba(0,0,0,.3), 0 0 1px 0 rgba(0,20,51,.4);
+	transition: 350ms ease-in-out;
+}
+@media (max-width: 768px){
+	.about__programs__container{
+		flex-direction: column;
+	}
+	.about__programs__container__item{
+		width: 100%;
+		height: 150px;
+		margin-bottom: 1em;
+	}
+	.about__programs__container__item__tittle{
+		max-width: 90%;
+	}
+	}
+.about__programs__container__item__button{
+	justify-self: flex-end;
+	align-self: flex-end;
+}
+.about__programs__container__item__button{
+	color: #fff;
+	transition: 350ms;
+	margin-right: 1em;
+}
+.about__programs__container__item:hover{
+	box-shadow: 0 20px 40px rgba(0,0,0,.0), 0 0 1px 0 rgba(0,20,51,.0);
+}
+.about__programs__container__item__button:hover{
+	opacity: 0.6;
+}
+.about__programs__container__item__button:hover img{
+	transform: translate(7px,0);
+}
+.about__programs__tittle{
+	margin-top: 1.7em;
+	margin-bottom: 1em;
+	font-family: 'Geometria';
+	font-weight: 500;
+	text-align: center;
+	color: #fff;
+}
